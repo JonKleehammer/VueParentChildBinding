@@ -1,16 +1,18 @@
 <template>
     <div id="legal-desc">
-        <h2>Data on the parent (legal-desc)</h2>
+        <h1>legal-desc component</h1>
+        <h3>Data on the parent (legal-desc)</h3>
         <h4>
             state: {{state}}<br>
             county: {{county}}
         </h4>
 
-        <h2>Inputs on parent for manipulating data</h2>
-        <input v-model="state"><br>
-        <input v-model="county">
+        <h3>Inputs on parent for manipulating data</h3>
+        state parent input: <input v-model="state"><br>
+        county parent input: <input v-model="county">
 
         <h2>Inputs in child components</h2>
+<!--        v-model on a vue component creates 2 things-->
         <state v-model="state"></state>
         <county v-model="county"></county>
     </div>
