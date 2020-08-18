@@ -11,10 +11,10 @@ require("channels")
 import Vue from 'vue/dist/vue'
 
 const legalDesc = () => import('../components/legal-desc')
-const state = () => import('../components/state')
-const county = () => import('../components/county')
+const grandparent = () => import('../components/grandparent')
 
 Vue.component('legal-desc', legalDesc)
+Vue.component('grandparent', grandparent)
 
 document.addEventListener('DOMContentLoaded', () => {
     new Vue({

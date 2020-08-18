@@ -1,19 +1,16 @@
 <template>
     <div id="county">
         <h1>county component</h1>
-        county: <input :value="countyProp"
-                      @input="$emit('updateCountyProp', $event.target.value)"  />
+        state: {{state}}<br>
+        county: <input :value="county"
+                      @input="$emit('update:county', $event.target.value)"  />
     </div>
 </template>
 
 <script>
     export default {
         name: "county",
-        props: ['countyProp'],
-        model: {
-            prop: 'countyProp',
-            event: 'updateCountyProp'
-        }
+        props: ['county', 'state'],
     }
 </script>
 
