@@ -1,7 +1,8 @@
 <template>
     <div id="legal-desc">
-        <h2>Inputs in child components</h2>
-        <state v-model="legal.state"></state>
+        <h3>legal-desc component</h3>
+        legal: {{legal}}<br>
+        <state :state.sync="legal.state"></state>
         <county :county.sync="legal.county" :state="legal.state"></county>
     </div>
 </template>
@@ -12,9 +13,7 @@
 
     export default {
         name: "legal-desc",
-        props: {
-            legal: { default: {state: null, county: null} }
-        },
+        props: ['legal'],
         components: {
             state,
             county
@@ -26,7 +25,7 @@
     #legal-desc {
         margin: 20px;
         padding: 20px;
-        width: 600px;
+        display: inline-block;
         background-color: lightgoldenrodyellow;
     }
 </style>

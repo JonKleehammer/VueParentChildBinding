@@ -1,7 +1,8 @@
 <template>
-    <div>
-        <legal-description :legal.sync="legals[0]"></legal-description>
-        <legal-description :legal.sync="legals[1]"></legal-description>
+    <div id="grandparent">
+        <h3>grandparent component</h3>
+        legals: {{legals}}
+        <legal-description v-for="legal in legals" :legal.sync="legal"/>
     </div>
 </template>
 
@@ -10,17 +11,22 @@
 
     export default {
         name: "grandparent",
+        props: {
+            legals: {default: () => [{}, {}] }
+        },
         components: {
             legalDescription
-        },
-        data() {
-            return {
-                legals: [{}, {}]
-            }
         }
     }
 </script>
 
 <style scoped>
-
+    #grandparent {
+        margin: 20px;
+        padding: 20px;
+        /*display: inline-block;*/
+        background-color: lightcoral;
+        display: inline-flex;
+        flex-direction: column;
+    }
 </style>

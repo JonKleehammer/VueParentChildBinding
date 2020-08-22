@@ -1,22 +1,22 @@
 <template>
     <div id="state">
-        <h1>state component</h1>
-        state: <input :value="value"
-                      @input="$emit('input', $event.target.value)"  />
+        <h3>state component</h3>
+        state: <input :value="state"
+                      @input="$emit('update:state', $event.target.value)"  />
     </div>
 </template>
 
 <script>
     export default {
         name: "state",
-        props: ['value']
+        props: ['state']
     }
 </script>
 
 <style scoped>
     #state {
         background-color: lightblue;
-        width: 300px;
+        display: inline-block;
         margin: 10px;
         padding: 10px;
     }
