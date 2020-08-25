@@ -12,7 +12,7 @@
     export default {
         name: "grandparent",
         props: {
-            legals: {default: () => [{}, {}] }
+            legals: {default: () => [{}, {}, {}] }
         },
         components: {
             legalDescription
@@ -24,7 +24,6 @@
     #grandparent {
         margin: 20px;
         padding: 20px;
-        /*display: inline-block;*/
         background-color: lightcoral;
         display: inline-flex;
         flex-direction: column;
