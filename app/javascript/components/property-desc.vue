@@ -1,7 +1,9 @@
 <template>
     <div id="property-desc">
         <h3>property-desc component</h3>
-        legals: {{legals}}
+        legals:
+        <p style="white-space: pre">{{JSON.stringify(legals, null, 4)}}</p>
+
         <button id="add-legal-button" @click="addLegal">Add Legal</button>
         <legal-description v-for="legal in legals" :legal.sync="legal"/>
     </div>

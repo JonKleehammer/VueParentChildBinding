@@ -1,6 +1,7 @@
 <template>
     <div id="state">
         <h3>state component</h3>
+        state: {{state}}<br>
         state: <input :value="state"
                       @input="$emit('update:state', $event.target.value)"  />
     </div>

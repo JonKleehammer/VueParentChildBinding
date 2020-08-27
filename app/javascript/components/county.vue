@@ -2,6 +2,7 @@
     <div id="county">
         <h3>county component</h3>
         state: {{state}}<br>
+        county: {{county}}<br>
         county: <input :value="county"
                       @input="$emit('update:county', $event.target.value)"  />
     </div>

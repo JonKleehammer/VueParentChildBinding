@@ -2,7 +2,7 @@
     <div id="master-form">
         <h3>master-form component</h3>
         mockAxiosData:
-        {{mockAxios}}
+        <p style="white-space: pre">{{JSON.stringify(mockAxios, null, 4)}}</p>
         <property-desc :legals.sync="mockAxios.legals"></property-desc>
     </div>
 </template>
@@ -18,8 +18,13 @@
         data() {
             return {
                 mockAxios: {
-                    legals: [{state: 'Texas', county: 'Andrews'}],
-                    crossReference: {number: '001', name: ''}
+                    legals: [
+                        {state: 'Texas', county: 'Andrews'},
+                        {state: 'Oklahoma', county: 'BEAVER'}
+                    ],
+                    xrefs: [
+                        {number: '001', name: 'test.pdf'}
+                    ]
                 }
             }
         }
